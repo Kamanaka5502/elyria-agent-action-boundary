@@ -1,0 +1,2 @@
+# No external runtime dependencies are required for the public-safe sandbox.
+# The sandbox runs with the Python standard library.
