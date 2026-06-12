@@ -1,0 +1,19 @@
+{
+  "scenario": "Risky Tool-Using Agent",
+  "stage": "production_candidate",
+  "action_class": "execute",
+  "tool_type": "record_update",
+  "data_classification": "confidential",
+  "sensitive_data": true,
+  "business_owner": "Operations",
+  "technical_owner": "Automation Team",
+  "tool_owner": "Customer Records System",
+  "authority_resolved": false,
+  "tool_scope_defined": false,
+  "human_approval_required": true,
+  "approval_present": false,
+  "telemetry_required": true,
+  "telemetry_present": false,
+  "revalidation_required": false,
+  "expected_outcome": "REFUSE"
+}
