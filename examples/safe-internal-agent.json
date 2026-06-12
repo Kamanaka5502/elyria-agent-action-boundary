@@ -1,0 +1,19 @@
+{
+  "scenario": "Safe Internal Knowledge Agent",
+  "stage": "pilot",
+  "action_class": "recommend",
+  "tool_type": "read_only_knowledge",
+  "data_classification": "internal",
+  "sensitive_data": false,
+  "business_owner": "Knowledge Operations",
+  "technical_owner": "AI Platform Team",
+  "tool_owner": "Internal Knowledge Platform",
+  "authority_resolved": true,
+  "tool_scope_defined": true,
+  "human_approval_required": true,
+  "approval_present": true,
+  "telemetry_required": true,
+  "telemetry_present": true,
+  "revalidation_required": false,
+  "expected_outcome": "ADMIT"
+}
