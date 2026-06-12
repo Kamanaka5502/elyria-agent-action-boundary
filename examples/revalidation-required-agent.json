@@ -1,0 +1,19 @@
+{
+  "scenario": "Agent With Changed Tool Permission",
+  "stage": "production",
+  "action_class": "execute",
+  "tool_type": "workflow_trigger",
+  "data_classification": "internal",
+  "sensitive_data": false,
+  "business_owner": "Operations",
+  "technical_owner": "AI Platform Team",
+  "tool_owner": "Workflow Platform Team",
+  "authority_resolved": true,
+  "tool_scope_defined": true,
+  "human_approval_required": true,
+  "approval_present": true,
+  "telemetry_required": true,
+  "telemetry_present": true,
+  "revalidation_required": true,
+  "expected_outcome": "REVALIDATE"
+}
