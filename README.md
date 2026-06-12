@@ -4,7 +4,7 @@
 
 ## Agentic Governance · Tool-Use Boundaries · Action Authority · Production Safety
 
-<img src="assets/elyria-agent-action-boundary.jpg" alt="Elyria Agent Action Boundary" width="100%">
+<img src="assetselyria-agent-action-boundary.jpg" alt="Elyria Agent Action Boundary" width="100%">
 
 ![License](https://img.shields.io/badge/license-MIT-1f4f5a?style=for-the-badge)
 ![Agentic AI](https://img.shields.io/badge/Agentic%20AI-Action%20Boundary-1f4f5a?style=for-the-badge)
