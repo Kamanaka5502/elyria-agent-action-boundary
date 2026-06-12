@@ -9,6 +9,7 @@
 ![Tool Governance](https://img.shields.io/badge/Tool%20Governance-Authority%20Checked-2f6f73?style=for-the-badge)
 ![Enterprise Ready](https://img.shields.io/badge/Enterprise--Ready-Pilot%20Deployment-c9a66b?style=for-the-badge)
 ![Auditability](https://img.shields.io/badge/Auditability-Telemetry%20%2B%20Evidence-5f8fa3?style=for-the-badge)
+![Deployable Sandbox](https://img.shields.io/badge/Deployable-Sandbox%20Runner-5f8fa3?style=for-the-badge)
 
 ### **Govern what an AI agent may access, call, change, escalate, or refuse before tool use becomes enterprise consequence.**
 
@@ -18,6 +19,36 @@
 ![Production](https://img.shields.io/badge/Production-Readiness%20Gate-5f8fa3?style=flat-square)
 
 </div>
+
+---
+
+## Deployable Sandbox Quick Start
+
+Run the public-safe sandbox from the repository root:
+
+```bash
+python sandbox/run_sandbox.py
+```
+
+The sandbox evaluates every scenario in:
+
+```text
+examples/
+```
+
+It produces decision results at:
+
+```text
+sandbox/outputs/sandbox-results.json
+```
+
+Expected path:
+
+```text
+safe-internal-agent.json           → ADMIT
+risky-tool-agent.json              → REFUSE
+revalidation-required-agent.json   → REVALIDATE
+```
 
 ---
 
@@ -108,7 +139,7 @@ Post-action logging, monitoring, and revalidation
 | Telemetry | What must be logged to prove agent behavior? | `docs/telemetry-and-auditability.md` |
 | Production readiness | What evidence is required before pilot or production movement? | `docs/production-readiness-checklist.md` |
 | Enterprise demo | How should this be shown to buyers, hiring panels, or executive stakeholders? | `docs/enterprise-demo-script.md` |
-| Sandbox | How can agent scenarios be evaluated safely? | `sandbox/agent-boundary-playground.md` |
+| Deployable sandbox | How can sample scenarios be executed locally? | `docs/deployable-sandbox.md` and `sandbox/run_sandbox.py` |
 | Sample report | What does an enterprise-ready review output look like? | `reports/sample-agent-action-boundary-report.md` |
 
 ---
@@ -117,6 +148,10 @@ Post-action logging, monitoring, and revalidation
 
 | Asset | Purpose |
 |---|---|
+| `src/elyria_agent_boundary/engine.py` | Public-safe decision engine for ADMIT / HOLD / REFUSE / REVALIDATE. |
+| `src/elyria_agent_boundary/schema.py` | Scenario schema helpers and decision constants. |
+| `sandbox/run_sandbox.py` | Local sandbox runner for example scenarios. |
+| `docs/deployable-sandbox.md` | Sandbox runbook and pilot usage documentation. |
 | `docs/agent-action-boundary-model.md` | Core architecture model for governing agentic action. |
 | `docs/tool-authority-matrix.md` | Tool classification and authority matrix. |
 | `docs/human-approval-boundaries.md` | Human-in-the-loop and delegated authority rules. |
@@ -130,7 +165,6 @@ Post-action logging, monitoring, and revalidation
 | `sandbox/agent-boundary-playground.md` | Sandbox model for evaluating agent actions. |
 | `reports/sample-agent-action-boundary-report.md` | Example enterprise readiness report. |
 | `tests/expected-agent-boundary-outcomes.md` | Public-safe test expectations. |
-| `LICENSE` | MIT license. |
 | `NOTICE.md` | Public-safe boundary and attribution notice. |
 
 ---
